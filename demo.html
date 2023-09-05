@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>/* Style for the card containers */
+    .card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Style for the images */
+    .card .img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    /* Style for the overlay (play button and text) */
+    .card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    /* Style for the play button */
+    .card .overlay .play-button {
+        width: 50px;
+        height: 50px;
+        background: url('play-button-icon.png') no-repeat center center;
+        background-size: contain;
+    }
+    
+    /* Style for the "Watch Now" text */
+    .card .overlay .watch-now {
+        color: white;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    /* Style for the image titles */
+    .card .img-title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #333; /* Adjust the color as needed */
+    }
+    
+    /* Hover effect - Show the overlay on hover and scale the card */
+    .card:hover {
+        transform: scale(1.05);
+    }
+    
+    .card:hover .overlay {
+        opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <section class="online-games-section">
+        <div class="online-games-img">
+            <div class="card">
+                <img class="img" src="/images/Rectangle 4.png" alt="">
+                <div class="overlay">
+                    <div class="play-button"></div>
+                    <p class="watch-now">Watch Now</p>
+                </div>
+                <h2 class="img-title">Title 1</h2>
+            </div>
+    
+            <div class="card">
+                <img class="img" src="/images/Rectangle 5.png" alt="">
+                <div class="overlay">
+                    <div class="play-button"></div>
+                    <p class="watch-now">Watch Now</p>
+                </div>
+                <h2 class="img-title">Title 2</h2>
+            </div>
+    
+            <div class="card">
+                <img class="img" src="/images/Rectangle 6.png" alt="">
+                <div class="overlay">
+                    <div class="play-button"></div>
+                    <p class="watch-now">Watch Now</p>
+                </div>
+                <h2 class="img-title">Title 3</h2>
+            </div>
+    
+            <div class="card">
+                <img class="img" src="/images/Rectangle 7.png" alt="">
+                <div class="overlay">
+                    <div class="play-button"></div>
+                    <p class="watch-now">Watch Now</p>
+                </div>
+                <h2 class="img-title">Title 4</h2>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
