@@ -6,17 +6,27 @@
     font-size: 3rem;
 }
 
+.display {
+    display: none;
+}
+
+
+
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: aqua;
-    /* padding: 2rem; */
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
     height: 90px;
     width: 100%;
-    /* margin-bottom: 56px; */
+}
+
+.primary-title-color {
+    background: var(--Linear, linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header-img {
@@ -25,13 +35,11 @@ header {
     gap: 20px;
 }
 
-nav {
-    /* margin-right: 30px; */
-}
 
 nav>a {
     margin-right: 40px;
     text-decoration: none;
+    padding: 40px 20px;
 }
 
 nav>:hover {
@@ -39,6 +47,9 @@ nav>:hover {
     padding: 20px;
     transform: scale(1.1);
     display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform: scale(1.1);
 
 }
 
@@ -48,18 +59,12 @@ nav>:hover {
     gap: 68px;
     width: 100%;
     height: 600px;
-    /* border: 1px solid black; */
 
 
 }
 
 .banner-title {
-    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 5.5rem;
-
 
 }
 
@@ -71,7 +76,6 @@ nav>:hover {
     width: 50%;
     height: 600px;
     background-image: url("/images/Group\ 14.png");
-
 
 
 }
@@ -99,7 +103,7 @@ nav>:hover {
     justify-content: space-between;
     margin-top: 3rem;
     margin-bottom: 100px;
-    /* gap: 2.5rem; */
+
 }
 
 
@@ -112,16 +116,13 @@ nav>:hover {
 .instant-play {
     display: flex;
     width: 90%;
-    margin-left: 250px;
-    gap: 252px;
+    margin-left: 150px;
+    gap: 240px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 120px;
 }
 
-/* .cowboy-body{
-    width: 70%;
-} */
 .cowboy {
     width: 600px;
 }
@@ -148,7 +149,7 @@ nav>:hover {
     align-items: center;
     width: 200px;
     height: 70px;
-   
+
 }
 
 .game-category:hover {
@@ -164,22 +165,23 @@ nav>:hover {
     box-sizing: border-box;
     transform: scale(1.1);
     /* border: 1.5px solid var(--Linear, #FF42A5); */
-   
+
 }
 
-footer{
+footer {
     background-color: #0B0223;
     width: 100%;
     text-align: center;
 }
 
-.footer-body{
-width: 69%;
-margin: auto;
+.footer-body {
+    width: 60%;
+    margin: auto;
 
-padding-top: 120px;
+    padding-top: 120px;
 }
-.footer-title{
+
+.footer-title {
     color: #FFF;
     display: flex;
     gap: 20px;
@@ -188,7 +190,7 @@ padding-top: 120px;
     align-items: center;
 }
 
-.footer-description{
+.footer-description {
     color: #FFF;
     display: flex;
     justify-content: center;
@@ -196,22 +198,24 @@ padding-top: 120px;
     text-decoration: none;
     gap: 60px;
     padding: 55px 0px;
-    
-    
+
+
 }
-.icon{
+
+.icon {
     display: flex;
     justify-content: center;
     gap: 40px;
-   padding: 55px 0px;
-    
+    padding: 55px 0px;
+
 }
-.icon-img{
+
+.icon-img {
     width: 40px;
     height: 40px;
 }
 
-.condition{
+.condition {
     display: flex;
     gap: 40px;
     color: #FFF;
@@ -219,7 +223,211 @@ padding-top: 120px;
     padding: 20px 0px;
 }
 
-h6{
+h6 {
     color: #FFF;
     text-align: center;
+}
+
+
+
+/* mobile responsive */
+
+@media screen and (max-width:576px) {
+
+    .header,
+    .banner,
+    .online-games-text,
+    .online-games-img,
+    .instant-play {
+        flex-direction: column;
+    }
+
+    nav>a {
+        gap: 10px;
+        text-decoration: none;
+    }
+
+    .header {
+        margin-bottom: 50px;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+        gap: 0px;
+        width: 100%;
+        height: 900px;
+    }
+
+    .banner-container {
+
+        width: 100%;
+
+
+    }
+
+    .primary-title {
+        font-size: 2rem;
+    }
+
+    .banner-title {
+        font-size: 3rem;
+
+    }
+
+    .banner-img {
+        width: 90%;
+        height: 400px;
+        padding: 15px;
+
+    }
+
+    .cowboy-body {
+        margin-top: 50px;
+    }
+
+    .cowboy {
+        width: 300px;
+    }
+
+    .taling-angela {
+        position: relative;
+        margin-top: -270px;
+        margin-left: -20px;
+        width: 100px;
+
+    }
+
+    .instant-play {
+
+        width: 90%;
+        margin: auto;
+        gap: 0px;
+
+    }
+
+    .main-body {
+        width: 80%;
+        margin: auto;
+        margin-top: 120px;
+    }
+
+    .online-games-text {
+        text-align: center;
+    }
+
+    .game-category-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 130px;
+    }
+
+    .category-img {
+        width: 30px;
+    }
+
+    .game-category {
+        display: flex;
+        /* gap: 1rem; */
+        align-items: center;
+        width: 100px;
+        height: 60px;
+
+    }
+
+    .game-category>p {
+        font-size: small;
+    }
+
+    .online-games-img {
+        margin-top: 3rem;
+        margin-bottom: 100px;
+        text-align: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .footer-body {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+
+        /* padding-top: 120px; */
+    }
+
+    .footer-description {
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: small;
+    }
+
+    .icon {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px 0px;
+
+    }
+
+
+}
+
+/* medium device */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .banner {
+        flex-direction: column-reverse;
+
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+        gap: 0px;
+        width: 100%;
+        height: 900px;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: 400px;
+        padding: 15px;
+
+    }
+
+    .banner-container {
+
+        width: 100%;
+
+
+    }
+
+    .online-games-img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .instant-play {
+        flex-direction: column;
+        margin-left: 80px;
+        gap: 40px;
+    }
+
+    .game-category-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 130px;
+    }
+
+    h6 {
+        padding-bottom: 50px;
+    }
+
+
+
 }
